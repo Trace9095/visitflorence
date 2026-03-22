@@ -96,9 +96,7 @@ export default function BlogPage() {
       {/* Featured post */}
       <Link href={`/blog/${posts[0].slug}`}
         className="block rounded-2xl border p-6 mb-8 group transition-colors"
-        style={{ backgroundColor: "#2C1A0E", borderColor: "#3D2518" }}
-        onMouseOver={(e) => (e.currentTarget.style.borderColor = "#C19A6B")}
-        onMouseOut={(e) => (e.currentTarget.style.borderColor = "#3D2518")}>
+        style={{ backgroundColor: "#2C1A0E", borderColor: "#3D2518" }}>
         <div className="flex items-center gap-2 mb-3">
           <span className="text-xs font-semibold px-2 py-0.5 rounded-full"
             style={{ backgroundColor: CATEGORY_COLORS[posts[0].category] ?? "#C19A6B", color: "#1C1210" }}>
@@ -128,9 +126,7 @@ export default function BlogPage() {
         {posts.slice(1).map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`}
             className="block rounded-2xl border p-5 group transition-colors"
-            style={{ backgroundColor: "#2C1A0E", borderColor: "#3D2518" }}
-            onMouseOver={(e) => (e.currentTarget.style.borderColor = "#C19A6B")}
-            onMouseOut={(e) => (e.currentTarget.style.borderColor = "#3D2518")}>
+            style={{ backgroundColor: "#2C1A0E", borderColor: "#3D2518" }}>
             <div className="flex items-center gap-2 mb-3">
               <span className="text-xs font-semibold px-2 py-0.5 rounded-full"
                 style={{ backgroundColor: CATEGORY_COLORS[post.category] ?? "#C19A6B", color: "#1C1210" }}>
