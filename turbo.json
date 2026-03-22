@@ -3,7 +3,26 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"],
+      "env": [
+        "DATABASE_URL",
+        "POSTGRES_URL",
+        "POSTGRES_USER",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_HOST",
+        "POSTGRES_DATABASE",
+        "NEON_PROJECT_ID",
+        "STRIPE_SECRET_KEY",
+        "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY",
+        "STRIPE_WEBHOOK_SECRET",
+        "STRIPE_PRICE_PREMIUM",
+        "STRIPE_PRICE_SPONSORED",
+        "RESEND_API_KEY",
+        "NEXT_PUBLIC_SITE_URL",
+        "ADMIN_EMAIL",
+        "ADMIN_PASSWORD_HASH",
+        "JWT_SECRET"
+      ]
     },
     "dev": {
       "cache": false,
