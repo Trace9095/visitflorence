@@ -1,0 +1,41 @@
+# Visit Florence, CO — llms.txt
+# Florence, Colorado Tourism Directory
+
+## About
+Visit Florence, CO is the official tourism directory for Florence, Colorado — the Antique Capital of Colorado. Florence is the closest town to the Royal Gorge, just 15 minutes away.
+
+## Key Facts
+- Location: Florence, CO 81226, Fremont County, Colorado
+- Nickname: Antique Capital of Colorado
+- Distance to Royal Gorge: 15 minutes
+- Distance to Cañon City: 15 minutes  
+- Distance to Pueblo: 45 minutes
+- Distance to Colorado Springs: 75 minutes
+
+## Directory Categories
+- Antiques: 100+ antique shops, dealers, and galleries in downtown Florence
+- Breweries: Florence Brewing Company and local craft breweries
+- Restaurants: Local dining from family-owned cafes to full-service restaurants
+- Activities: Outdoor recreation, hiking, Arkansas River, Gold Belt Tour Scenic Byway
+- Events: Community events, antique shows, festivals
+
+## Sister Sites (Epic Adventures Network)
+- Royal Gorge Rafting: https://royalgorgerafting.net — Class III-V whitewater rafting
+- Royal Gorge Zipline Tours: https://royalgorgeziplinetours.com — Gorge-spanning zipline
+- Royal Gorge Vacation Rentals: https://royalgorgevacationrentals.com — Yurts and glamping
+- Royal Gorge Epic Adventures: https://royalgorgeepicadventures.com — Multi-activity packages
+- Whitewater Bar & Grill: https://whitewaterbar.com — Riverside dining and live music
+- Rooftop Social: https://wwrooftopsocial.com — Rooftop bar in Canon City
+- The Edge Zipline: https://theedgezip.com — Sky-high zip experiences
+
+## Business Listing Plans
+- Free: Basic listing with name, address, description
+- Premium ($99/month): Full listing with gallery, menu, booking link, enhanced SEO
+- Sponsored ($199/month): Featured placement, homepage spotlight, banner ads
+
+## Contact
+- Add your business: https://visitflorence.co/add-listing
+- Request a listing: https://visitflorence.co/request-listing
+
+## Sitemap
+https://visitflorence.co/sitemap.xml
