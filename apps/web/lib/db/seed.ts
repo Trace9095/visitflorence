@@ -20,7 +20,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Mon-Sat 10am-5pm, Sun 11am-4pm",
     featured: true,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Colorado Antique Center",
@@ -34,7 +34,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Daily 10am-5pm",
     featured: true,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Canyon Street Antiques",
@@ -48,7 +48,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Thu-Mon 10am-5pm",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1572635148818-ef6fd45eb394?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Main Street Finds",
@@ -62,7 +62,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Wed-Sun 10am-5pm",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1622372738946-62e02505feb3?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "River Valley Antique Mall",
@@ -76,7 +76,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Daily 9am-6pm",
     featured: true,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1551361415-69c27787d26b?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Heritage House Antiques",
@@ -90,7 +90,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Fri-Sun 10am-5pm",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "The Vintage Vault",
@@ -104,7 +104,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Tue-Sun 10am-5pm",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Rustic Barn Antiques",
@@ -118,7 +118,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Sat-Sun 10am-4pm",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1504673832-76b5f1a81bd1?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Fremont County Antique Mall",
@@ -132,7 +132,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Mon-Sat 10am-5pm, Sun 11am-4pm",
     featured: true,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1567016432779-094069958ea5?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Old Town Treasures",
@@ -146,7 +146,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Daily 10am-5pm",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1524055988636-436cfa46e59e?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Mountain State Collectibles",
@@ -160,7 +160,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Thu-Mon 10am-5pm",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1605101100278-5d1deb2b6498?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "The Book Nook & Antiques",
@@ -174,7 +174,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Wed-Sun 10am-5pm",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Silver & Gold Jewelers",
@@ -188,7 +188,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Mon-Sat 10am-5pm",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Americana Depot",
@@ -202,7 +202,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Fri-Mon 10am-5pm",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1584068426901-c4e01de7e19b?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "The Glass Menagerie",
@@ -216,7 +216,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Tue-Sun 10am-5pm",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=800&q=80&auto=format&fit=crop",
   },
 
   // --- BREWERIES ---
@@ -232,7 +232,7 @@ const listingsData: schema.NewListing[] = [
     website: "https://florencebrewing.com",
     hours: "Wed-Thu 4-9pm, Fri-Sat 12-10pm, Sun 12-7pm",
     featured: true,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1559526324-593bc073d938?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Royal Gorge Brewing Co",
@@ -246,7 +246,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Daily 11am-9pm",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1513558161-c9f15f90c0ad?w=800&q=80&auto=format&fit=crop",
   },
 
   // --- RESTAURANTS ---
@@ -262,7 +262,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Tue-Sun 11am-9pm",
     featured: true,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Main Street Diner",
@@ -276,7 +276,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Mon-Sat 6am-2pm, Sun 7am-1pm",
     featured: true,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Mi Rancho Mexican Restaurant",
@@ -290,7 +290,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Tue-Sun 11am-8pm",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "The Depot Cafe",
@@ -304,7 +304,69 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Mon-Sat 7am-3pm",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80&auto=format&fit=crop",
+  },
+
+  // --- SISTER BUSINESSES (Canon City / Royal Gorge — 15 min from Florence) ---
+  {
+    name: "WhiteWater Bar & Grill",
+    slug: "whitewater-bar-grill",
+    category: "restaurants",
+    shortDescription: "Riverside dining and live music in Canon City — 15 min from Florence.",
+    description:
+      "WhiteWater Bar & Grill in Canon City is the go-to spot for cold drinks, great food, and live weekend entertainment after a day on the river or at the Royal Gorge. Known for their smoked meats, signature cocktails, and expansive outdoor patio. Just 15 minutes from Florence.",
+    address: "624 Main St, Canon City, CO 81212",
+    phone: "(719) 275-5000",
+    website: "https://whitewaterbar.com",
+    hours: "Mon-Sat 11am-10pm, Sun 11am-9pm",
+    featured: true,
+    tier: "sponsored",
+    imageUrl: "/images/listings/wwbg-hero.jpg",
+  },
+  {
+    name: "Rooftop Social",
+    slug: "rooftop-social",
+    category: "restaurants",
+    shortDescription: "Rooftop dining with Royal Gorge views in Canon City.",
+    description:
+      "Rooftop Social is Canon City's premier rooftop bar and restaurant, offering stunning views of the Arkansas River valley and Sangre de Cristo mountains. Creative cocktails, fresh food, and the best sunset views in the region — just 15 minutes from Florence.",
+    address: "302 Royal Gorge Blvd, Canon City, CO 81212",
+    phone: "(719) 276-2323",
+    website: "https://wwrooftopsocial.com",
+    hours: "Wed-Sun 4pm-10pm",
+    featured: true,
+    tier: "sponsored",
+    imageUrl: "/images/listings/rt-hero.jpg",
+  },
+  {
+    name: "Royal Gorge Rafting",
+    slug: "royal-gorge-rafting",
+    category: "activities",
+    shortDescription: "World-class Class III–V whitewater rafting through the Royal Gorge.",
+    description:
+      "Royal Gorge Rafting offers guided whitewater adventures on the Arkansas River through the dramatic Royal Gorge — 1,000-foot canyon walls, Class III–V rapids, and scenery unlike anywhere in the world. Half-day and full-day trips available. Just 15 minutes from Florence.",
+    address: "45000 US-50, Canon City, CO 81212",
+    phone: "(719) 275-7238",
+    website: "https://royalgorgerafting.net",
+    hours: "Daily May-Sept, 8am-6pm",
+    featured: true,
+    tier: "sponsored",
+    imageUrl: "/images/listings/rgr-hero.jpg",
+  },
+  {
+    name: "Royal Gorge Zipline Tours",
+    slug: "royal-gorge-zipline-tours",
+    category: "activities",
+    shortDescription: "Epic zipline adventures over the Royal Gorge canyon.",
+    description:
+      "Soar over the Royal Gorge on one of Colorado's most thrilling zipline experiences. Royal Gorge Zipline Tours offers classic and extreme courses with breathtaking views of the 1,000-foot canyon walls and the Arkansas River below. Located 15 minutes from Florence.",
+    address: "45045 US-50, Canon City, CO 81212",
+    phone: "(719) 275-7507",
+    website: "https://royalgorgeziplinetours.com",
+    hours: "Daily May-Sept, 8am-5pm",
+    featured: true,
+    tier: "sponsored",
+    imageUrl: "/images/listings/rgzt-hero.jpg",
   },
 
   // --- ACTIVITIES ---
@@ -320,7 +382,7 @@ const listingsData: schema.NewListing[] = [
     website: "https://royalgorgebridge.com",
     hours: "Daily 9am-6pm (seasonal hours vary)",
     featured: true,
-    imageUrl: null,
+    imageUrl: "/images/listings/royal-gorge-canyon.jpg",
   },
   {
     name: "Gold Belt Tour Scenic Byway",
@@ -334,7 +396,7 @@ const listingsData: schema.NewListing[] = [
     website: "https://goldbeltbyway.com",
     hours: "Open year-round (some sections seasonal)",
     featured: true,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Dinosaur Depot Museum",
@@ -348,7 +410,7 @@ const listingsData: schema.NewListing[] = [
     website: "https://dinosaurdepot.com",
     hours: "Mon-Sat 9am-5pm",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Arkansas River Recreation",
@@ -362,7 +424,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Year-round (rafting season April-September)",
     featured: false,
-    imageUrl: null,
+    imageUrl: "/images/listings/rgr-rafting.jpg",
   },
   {
     name: "Florence Historic Downtown Walking Tour",
@@ -376,7 +438,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Self-guided, available anytime",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80&auto=format&fit=crop",
   },
 
   // --- ART ---
@@ -392,7 +454,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Tue-Sat 11am-5pm",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=800&q=80&auto=format&fit=crop",
   },
   {
     name: "Adobe House Gallery",
@@ -406,7 +468,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Fri-Sun 11am-5pm",
     featured: false,
-    imageUrl: null,
+    imageUrl: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&q=80&auto=format&fit=crop",
   },
 ];
 
