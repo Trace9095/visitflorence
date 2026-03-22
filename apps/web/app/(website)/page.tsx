@@ -2,7 +2,7 @@ import Link from "next/link";
 import { MapPin, ChevronRight, Store, Beer, Utensils, Mountain, Palette, Navigation, ChevronDown } from "lucide-react";
 import { getDb } from "@/lib/db";
 import { listings } from "@/lib/db/schema";
-import { eq, and } from "drizzle-orm";
+import { eq, and, ne } from "drizzle-orm";
 import { ListingCard } from "@/components/listing-card";
 import type { Metadata } from "next";
 
@@ -80,7 +80,7 @@ export default async function HomePage() {
   const featuredListings = await db
     .select()
     .from(listings)
-    .where(and(eq(listings.featured, true)))
+    .where(and(eq(listings.featured, true), ne(listings.tier, "sponsored")))
     .limit(6);
 
   return (
