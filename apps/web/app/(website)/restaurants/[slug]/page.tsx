@@ -172,9 +172,7 @@ export default async function RestaurantDetailPage({ params }: { params: Promise
               {SISTER_SITES.map((site) => (
                 <a key={site.href} href={site.href} target="_blank" rel="noopener noreferrer"
                   className="flex items-center justify-between p-4 rounded-xl border transition-colors"
-                  style={{ borderColor: "#3D2518", backgroundColor: "#2C1A0E" }}
-                  onMouseOver={(e) => (e.currentTarget.style.borderColor = "#C19A6B")}
-                  onMouseOut={(e) => (e.currentTarget.style.borderColor = "#3D2518")}>
+                  style={{ borderColor: "#3D2518", backgroundColor: "#2C1A0E" }}>
                   <div>
                     <div className="text-sm font-medium" style={{ color: "#F5EDD6" }}>{site.label}</div>
                     <div className="text-xs mt-0.5" style={{ color: "#9B8374" }}>{site.desc}</div>
