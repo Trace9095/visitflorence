@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    google: '7jc12-lVG5f_urymoqzGqftRCjj_5iFngU0PSXzXdPI',
   },
 };
 
