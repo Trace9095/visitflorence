@@ -43,7 +43,6 @@ const SISTER_SITES = [
   { label: "Royal Gorge Zipline", href: "https://royalgorgeziplinetours.com", desc: "Gorge-spanning zip tours" },
   { label: "Royal Gorge Vacation Rentals", href: "https://royalgorgevacationrentals.com", desc: "Yurts & glamping" },
   { label: "Epic Adventures", href: "https://royalgorgeepicadventures.com", desc: "Multi-activity packages" },
-  { label: "The Edge Zipline", href: "https://theedgezip.com", desc: "Sky-high zip experiences" },
 ];
 
 export default async function RestaurantDetailPage({ params }: { params: Promise<{ slug: string }> }) {

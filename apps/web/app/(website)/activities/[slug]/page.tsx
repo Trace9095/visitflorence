@@ -41,7 +41,6 @@ const SISTER_SITES = [
   { label: "Royal Gorge Zipline", href: "https://royalgorgeziplinetours.com", desc: "Gorge-spanning zip tours" },
   { label: "Royal Gorge Vacation Rentals", href: "https://royalgorgevacationrentals.com", desc: "Yurts & glamping" },
   { label: "Epic Adventures", href: "https://royalgorgeepicadventures.com", desc: "Multi-activity packages" },
-  { label: "The Edge Zipline", href: "https://theedgezip.com", desc: "Sky-high zip experiences" },
   { label: "Whitewater Bar & Grill", href: "https://whitewaterbar.com", desc: "Riverside dining & live music" },
   { label: "Rooftop Social", href: "https://wwrooftopsocial.com", desc: "Downtown Canon City rooftop" },
 ];

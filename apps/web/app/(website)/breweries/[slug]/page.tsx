@@ -43,7 +43,6 @@ const SISTER_SITES = [
   { label: "Epic Adventures", href: "https://royalgorgeepicadventures.com", desc: "Multi-activity packages" },
   { label: "Whitewater Bar & Grill", href: "https://whitewaterbar.com", desc: "Riverside dining & live music" },
   { label: "Rooftop Social", href: "https://wwrooftopsocial.com", desc: "Downtown Canon City rooftop" },
-  { label: "The Edge Zipline", href: "https://theedgezip.com", desc: "Sky-high zip experiences" },
 ];
 
 export default async function BreweryDetailPage({ params }: { params: Promise<{ slug: string }> }) {

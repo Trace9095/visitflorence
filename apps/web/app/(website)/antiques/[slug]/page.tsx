@@ -70,11 +70,6 @@ const SISTER_SITES = [
     tagline: "Multi-activity adventure packages",
   },
   {
-    name: "The Edge Zip",
-    url: "https://theedgezip.com",
-    tagline: "Colorado's most thrilling zip course",
-  },
-  {
     name: "Whitewater Bar & Grill",
     url: "https://whitewaterbar.com",
     tagline: "Riverside dining in Cañon City",

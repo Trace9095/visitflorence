@@ -8,7 +8,6 @@ const SISTER_SITES = [
   { label: "Epic Adventures", href: "https://royalgorgeepicadventures.com" },
   { label: "Whitewater Bar & Grill", href: "https://whitewaterbar.com" },
   { label: "Rooftop Social", href: "https://wwrooftopsocial.com" },
-  { label: "The Edge Zipline", href: "https://theedgezip.com" },
 ];
 
 const sections = [

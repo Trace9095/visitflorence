@@ -26,11 +26,9 @@ Visit Florence, CO is the official tourism directory for Florence, Colorado — 
 - Royal Gorge Epic Adventures: https://royalgorgeepicadventures.com — Multi-activity packages
 - Whitewater Bar & Grill: https://whitewaterbar.com — Riverside dining and live music
 - Rooftop Social: https://wwrooftopsocial.com — Rooftop bar in Canon City
-- The Edge Zipline: https://theedgezip.com — Sky-high zip experiences
 
 ## Business Listing Plans
-- Free: Basic listing with name, address, description
-- Premium ($99/month): Full listing with gallery, menu, booking link, enhanced SEO
+- Standard ($99/month): Full listing with gallery, menu, booking link, enhanced SEO
 - Sponsored ($199/month): Featured placement, homepage spotlight, banner ads
 
 ## Contact
