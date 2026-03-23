@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
 };
 
 export default function RootLayout({
@@ -32,6 +36,7 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className="antialiased">
         {children}
+        <GoogleAnalytics />
         <Analytics />
         <SpeedInsights />
       </body>
