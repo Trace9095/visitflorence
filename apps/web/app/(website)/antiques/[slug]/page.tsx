@@ -316,7 +316,7 @@ export default async function AntiquePage({ params }: Props) {
               </div>
             </div>
 
-            {/* Upgrade CTA (free tier only) */}
+            {/* Upgrade CTA (unclaimed listings) */}
             {listing.tier === "free" && (
               <div
                 className="rounded-xl border p-6"

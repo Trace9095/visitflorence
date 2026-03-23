@@ -5,33 +5,18 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "List Your Business — Pricing",
   description:
-    "Grow your Florence, CO business with a premium listing on VisitFlorence. Free, Premium ($99/mo), and Sponsored ($199/mo) plans available.",
+    "Grow your Florence, CO business with a premium listing on VisitFlorence. Premium ($99/mo) and Sponsored ($199/mo) plans available. No free tier.",
 };
 
 const plans = [
   {
-    name: "Free",
-    price: "$0",
-    period: "",
-    description: "Get discovered by visitors browsing Florence.",
-    features: [
-      "Basic business listing",
-      "Name, address, phone, website",
-      "Category page placement",
-      "VisitFlorence directory listing",
-    ],
-    cta: "Add Free Listing",
-    href: "/add-listing?plan=free",
-    highlighted: false,
-    tier: "free",
-  },
-  {
     name: "Premium",
     price: "$99",
     period: "/mo",
-    description: "Stand out with featured placement and rich content.",
+    description: "Full business profile with featured placement and rich content.",
     features: [
-      "Everything in Free",
+      "Full business listing with contact info",
+      "Category page placement",
       "Featured badge + top placement",
       "Full photo gallery (up to 10 photos)",
       "Detailed hours + booking link",
@@ -167,15 +152,15 @@ export default function PricingPage() {
           {[
             {
               q: "How do I get started?",
-              a: "Click 'Add Free Listing' or choose a paid plan above. Complete the form with your business details and we'll publish your listing within 24 hours.",
+              a: "Choose a plan above and complete the form with your business details. We'll publish your listing within 24 hours of payment.",
             },
             {
               q: "Can I upgrade my plan later?",
-              a: "Yes — start free and upgrade to Premium or Sponsored at any time from your listing page. Billing is month-to-month with no long-term contract.",
+              a: "Yes — switch between Premium and Sponsored at any time from your listing page. Billing is month-to-month with no long-term contract.",
             },
             {
               q: "What does 'featured placement' mean?",
-              a: "Premium and Sponsored listings appear at the top of their category pages and in the 'Featured Businesses' section on the homepage, above free listings.",
+              a: "Sponsored listings appear at the very top of category pages and on the homepage. Premium listings get featured badges and priority in search results.",
             },
             {
               q: "How do I claim an existing listing?",

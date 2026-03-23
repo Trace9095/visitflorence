@@ -16,7 +16,6 @@ const CATEGORIES = [
 ];
 
 const PLANS = [
-  { value: "free", label: "Free — Basic listing", price: "$0" },
   { value: "premium", label: "Premium — Featured + gallery", price: "$99/mo" },
   { value: "sponsored", label: "Sponsored — Top placement", price: "$199/mo" },
 ];
@@ -29,7 +28,7 @@ export default function AddListingPage({
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [plan, setPlan] = useState("free");
+  const [plan, setPlan] = useState("premium");
 
   const [form, setForm] = useState({
     name: "",
@@ -40,7 +39,7 @@ export default function AddListingPage({
     hours: "",
     description: "",
     email: "",
-    plan: "free",
+    plan: "premium",
   });
 
   function set(k: keyof typeof form, v: string) {
@@ -85,7 +84,7 @@ export default function AddListingPage({
           Listing Submitted!
         </h1>
         <p className="leading-7 mb-6" style={{ color: "#9B8374" }}>
-          Thanks for submitting your business. We&apos;ll review and publish your free listing within 24 hours.
+          Thanks for submitting your business. We&apos;ll review and publish your listing within 24 hours.
         </p>
         <Link
           href="/"
@@ -117,7 +116,7 @@ export default function AddListingPage({
           Add Your Business
         </h1>
         <p className="leading-7" style={{ color: "#9B8374" }}>
-          List your Florence business and start reaching visitors today. Free listings are published within 24 hours.
+          List your Florence business and start reaching visitors today. Listings start at $99/mo and are published within 24 hours.
         </p>
       </div>
 
@@ -244,8 +243,6 @@ export default function AddListingPage({
           {loading && <Loader2 size={16} className="animate-spin" />}
           {loading
             ? "Submitting…"
-            : plan === "free"
-            ? "Submit Free Listing"
             : `Continue to Payment — ${PLANS.find((p) => p.value === plan)?.price}`}
         </button>
       </form>
