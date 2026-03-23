@@ -1,9 +1,11 @@
 import Link from "next/link";
-import { MapPin, ChevronRight, Store, Beer, Utensils, Mountain, Palette, Navigation, ChevronDown } from "lucide-react";
+import Image from "next/image";
+import { MapPin, ChevronRight, Store, Beer, Utensils, Mountain, Palette, Navigation, ChevronDown, Phone, ExternalLink } from "lucide-react";
 import { getDb } from "@/lib/db";
 import { listings } from "@/lib/db/schema";
 import { eq, and, ne } from "drizzle-orm";
 import { ListingCard } from "@/components/listing-card";
+import type { Listing } from "@/lib/db/schema";
 import type { Metadata } from "next";
 
 const FAQ_ITEMS = [
@@ -28,7 +30,6 @@ const FAQ_ITEMS = [
     a: "Florence is surrounded by world-class outdoor adventure. Within 15 minutes you can reach the Royal Gorge for whitewater rafting (Class III–V), zipline tours, and hiking. The Gold Belt Tour — a 100-mile Colorado scenic byway — starts in Florence and connects to Cripple Creek and Cañon City. The Arkansas River offers Gold Medal fly fishing just minutes away.",
   },
 ];
-
 
 export const metadata: Metadata = {
   title: "Visit Florence, CO — Antique Capital of Colorado",
@@ -75,13 +76,133 @@ const categories = [
   },
 ];
 
+const SISTER_CATEGORY_LABELS: Record<string, string> = {
+  restaurants: "Dining",
+  activities: "Adventure",
+  lodging: "Stay",
+  antiques: "Shopping",
+  breweries: "Brewery",
+  art: "Arts",
+  services: "Services",
+};
+
+function SisterCard({ listing }: { listing: Listing }) {
+  const categoryLabel = SISTER_CATEGORY_LABELS[listing.category] ?? "Partner";
+  return (
+    <div
+      className="rounded-xl border overflow-hidden flex flex-col"
+      style={{ backgroundColor: "#1C1210", borderColor: "#3D2518" }}
+    >
+      {/* Image */}
+      <div className="relative shrink-0" style={{ height: 180 }}>
+        {listing.imageUrl ? (
+          <Image
+            src={listing.imageUrl}
+            alt={listing.name}
+            fill
+            className="object-cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            quality={90}
+          />
+        ) : (
+          <div
+            className="w-full h-full"
+            style={{ background: "linear-gradient(135deg, #2C1A0E, #3D2518)" }}
+          />
+        )}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(28,18,8,0.65) 0%, transparent 55%)",
+          }}
+        />
+        <span
+          className="absolute top-2.5 left-2.5 text-xs font-mono px-2 py-1 rounded font-semibold uppercase tracking-wider"
+          style={{ backgroundColor: "rgba(193,154,107,0.92)", color: "#1C1210" }}
+        >
+          {categoryLabel}
+        </span>
+        <span
+          className="absolute top-2.5 right-2.5 text-xs font-mono px-2 py-1 rounded"
+          style={{
+            backgroundColor: "rgba(28,18,8,0.8)",
+            color: "#C19A6B",
+          }}
+        >
+          15 min away
+        </span>
+      </div>
+
+      {/* Content */}
+      <div className="p-5 flex flex-col flex-1">
+        <h3
+          className="font-bold text-base mb-1.5 leading-snug"
+          style={{ color: "#F5EDD6" }}
+        >
+          {listing.name}
+        </h3>
+        <p className="text-sm leading-5 mb-4 flex-1" style={{ color: "#9B8374" }}>
+          {listing.shortDescription}
+        </p>
+
+        <div className="space-y-2 mb-4">
+          {listing.address && (
+            <div className="flex items-start gap-2">
+              <MapPin
+                size={12}
+                style={{ color: "#9B8374", marginTop: 2, flexShrink: 0 }}
+              />
+              <span className="text-xs" style={{ color: "#9B8374" }}>
+                {listing.address}
+              </span>
+            </div>
+          )}
+          {listing.phone && (
+            <div className="flex items-center gap-2">
+              <Phone size={12} style={{ color: "#C19A6B", flexShrink: 0 }} />
+              <a
+                href={`tel:${listing.phone.replace(/\D/g, "")}`}
+                className="text-xs font-mono"
+                style={{ color: "#C19A6B" }}
+              >
+                {listing.phone}
+              </a>
+            </div>
+          )}
+        </div>
+
+        {listing.website && (
+          <a
+            href={listing.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-lg min-h-[36px] w-full justify-center transition-opacity hover:opacity-80"
+            style={{ backgroundColor: "#C19A6B", color: "#1C1210" }}
+          >
+            Visit Website
+            <ExternalLink size={12} />
+          </a>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export default async function HomePage() {
   const db = getDb();
-  const featuredListings = await db
-    .select()
-    .from(listings)
-    .where(and(eq(listings.featured, true), ne(listings.tier, "sponsored")))
-    .limit(6);
+
+  const [featuredListings, sisterBusinesses] = await Promise.all([
+    db
+      .select()
+      .from(listings)
+      .where(and(eq(listings.featured, true), ne(listings.tier, "sponsored")))
+      .limit(6),
+    db
+      .select()
+      .from(listings)
+      .where(eq(listings.tier, "sponsored")),
+  ]);
 
   return (
     <div>
@@ -89,8 +210,7 @@ export default async function HomePage() {
       <section
         className="relative px-4 py-24 md:py-36 text-center"
         style={{
-          background:
-            "linear-gradient(to bottom, #1C1210, #2C1A0E)",
+          background: "linear-gradient(to bottom, #1C1210, #2C1A0E)",
           borderBottom: "1px solid #3D2518",
         }}
       >
@@ -224,6 +344,82 @@ export default async function HomePage() {
                   />
                 );
               })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* 15 Minutes to Adventure — Sister Businesses */}
+      {sisterBusinesses.length > 0 && (
+        <section
+          className="py-16"
+          style={{
+            background: "linear-gradient(to bottom, #1A0F09, #2C1A0E)",
+            borderTop: "1px solid #3D2518",
+            borderBottom: "1px solid #3D2518",
+          }}
+        >
+          <div className="max-w-6xl mx-auto px-4">
+            {/* Section header */}
+            <div className="flex items-center gap-2 mb-3">
+              <span
+                className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest px-3 py-1.5 rounded-full border"
+                style={{ color: "#C19A6B", borderColor: "rgba(193,154,107,0.3)" }}
+              >
+                <MapPin size={11} />
+                15 Minutes from Florence
+              </span>
+            </div>
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+              <div>
+                <h2
+                  className="text-2xl md:text-3xl font-bold tracking-tight mb-2"
+                  style={{ color: "#F5EDD6" }}
+                >
+                  Adventure Awaits Next Door
+                </h2>
+                <p className="text-sm max-w-xl" style={{ color: "#9B8374" }}>
+                  Florence sits 15 minutes east of Canon City and the Royal Gorge.
+                  After antiquing on Main Street, explore world-class rafting, zipline
+                  tours, vacation rentals, and Colorado&apos;s most iconic canyon.
+                </p>
+              </div>
+              <Link
+                href="/activities"
+                className="shrink-0 inline-flex items-center gap-1.5 text-sm font-medium min-h-[44px] px-2"
+                style={{ color: "#C19A6B" }}
+              >
+                All activities <ChevronRight size={14} />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {sisterBusinesses.map((listing) => (
+                <SisterCard key={listing.id} listing={listing} />
+              ))}
+            </div>
+
+            {/* Contact callout */}
+            <div
+              className="mt-8 rounded-xl border p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
+              style={{ borderColor: "#3D2518", backgroundColor: "rgba(28,18,8,0.5)" }}
+            >
+              <div>
+                <p className="text-sm font-semibold mb-1" style={{ color: "#F5EDD6" }}>
+                  Book a Royal Gorge adventure
+                </p>
+                <p className="text-xs" style={{ color: "#9B8374" }}>
+                  Call our Canon City operations line — rafting, zipline, lodging &amp; more
+                </p>
+              </div>
+              <a
+                href="tel:7192757238"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm min-h-[44px] shrink-0 transition-opacity hover:opacity-80"
+                style={{ backgroundColor: "#C19A6B", color: "#1C1210" }}
+              >
+                <Phone size={14} />
+                (719) 275-7238
+              </a>
             </div>
           </div>
         </section>

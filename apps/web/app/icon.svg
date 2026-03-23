@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Dark background with rounded corners -->
+  <rect width="32" height="32" rx="7" fill="#2C1A0E"/>
+  <!-- Antique brass border frame -->
+  <rect x="2" y="2" width="28" height="28" rx="5" fill="none" stroke="#C19A6B" stroke-width="0.8" opacity="0.6"/>
+  <!-- Decorative corner ornaments -->
+  <rect x="3.5" y="3.5" width="4" height="0.8" fill="#C19A6B" opacity="0.5"/>
+  <rect x="3.5" y="3.5" width="0.8" height="4" fill="#C19A6B" opacity="0.5"/>
+  <rect x="24.5" y="3.5" width="4" height="0.8" fill="#C19A6B" opacity="0.5"/>
+  <rect x="27.7" y="3.5" width="0.8" height="4" fill="#C19A6B" opacity="0.5"/>
+  <rect x="3.5" y="27.7" width="4" height="0.8" fill="#C19A6B" opacity="0.5"/>
+  <rect x="3.5" y="24.5" width="0.8" height="4" fill="#C19A6B" opacity="0.5"/>
+  <rect x="24.5" y="27.7" width="4" height="0.8" fill="#C19A6B" opacity="0.5"/>
+  <rect x="27.7" y="24.5" width="0.8" height="4" fill="#C19A6B" opacity="0.5"/>
+  <!-- "F" letterform - serif style -->
+  <text x="16" y="22.5" font-family="Georgia, 'Times New Roman', serif" font-size="19" font-weight="bold" fill="#C19A6B" text-anchor="middle">F</text>
+  <!-- Thin decorative line under F -->
+  <line x1="10" y1="25.5" x2="22" y2="25.5" stroke="#C19A6B" stroke-width="0.6" opacity="0.35"/>
+</svg>

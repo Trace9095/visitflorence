@@ -10,7 +10,8 @@
     "type-check": "tsc --noEmit",
     "db:generate": "dotenv -e .env.local -- drizzle-kit generate",
     "db:push": "dotenv -e .env.local -- drizzle-kit push",
-    "db:seed": "dotenv -e .env.local -- tsx lib/db/seed.ts"
+    "db:seed": "dotenv -e .env.local -- tsx lib/db/seed.ts",
+    "db:fix-contacts": "dotenv -e .env.local -- tsx lib/db/fix-sister-contacts.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.10.4",
