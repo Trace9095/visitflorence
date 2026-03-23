@@ -20,7 +20,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Mon-Sat 10am-5pm, Sun 11am-4pm",
     featured: true,
-    imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "Colorado Antique Center",
@@ -34,7 +34,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Daily 10am-5pm",
     featured: true,
-    imageUrl: "https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "Canyon Street Antiques",
@@ -48,7 +48,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Thu-Mon 10am-5pm",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1572635148818-ef6fd45eb394?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "Main Street Finds",
@@ -62,7 +62,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Wed-Sun 10am-5pm",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1622372738946-62e02505feb3?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "River Valley Antique Mall",
@@ -76,7 +76,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Daily 9am-6pm",
     featured: true,
-    imageUrl: "https://images.unsplash.com/photo-1551361415-69c27787d26b?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "Heritage House Antiques",
@@ -90,7 +90,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Fri-Sun 10am-5pm",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "The Vintage Vault",
@@ -104,7 +104,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Tue-Sun 10am-5pm",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "Rustic Barn Antiques",
@@ -118,7 +118,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Sat-Sun 10am-4pm",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1504673832-76b5f1a81bd1?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "Fremont County Antique Mall",
@@ -132,7 +132,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Mon-Sat 10am-5pm, Sun 11am-4pm",
     featured: true,
-    imageUrl: "https://images.unsplash.com/photo-1567016432779-094069958ea5?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "Old Town Treasures",
@@ -146,7 +146,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Daily 10am-5pm",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1524055988636-436cfa46e59e?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "Mountain State Collectibles",
@@ -160,7 +160,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Thu-Mon 10am-5pm",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1605101100278-5d1deb2b6498?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "The Book Nook & Antiques",
@@ -174,7 +174,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Wed-Sun 10am-5pm",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "Silver & Gold Jewelers",
@@ -188,7 +188,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Mon-Sat 10am-5pm",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "Americana Depot",
@@ -202,7 +202,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Fri-Mon 10am-5pm",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1584068426901-c4e01de7e19b?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "The Glass Menagerie",
@@ -216,7 +216,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Tue-Sun 10am-5pm",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
 
   // --- BREWERIES ---
@@ -232,7 +232,7 @@ const listingsData: schema.NewListing[] = [
     website: "https://florencebrewing.com",
     hours: "Wed-Thu 4-9pm, Fri-Sat 12-10pm, Sun 12-7pm",
     featured: true,
-    imageUrl: "https://images.unsplash.com/photo-1559526324-593bc073d938?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "Royal Gorge Brewing Co",
@@ -246,7 +246,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Daily 11am-9pm",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1513558161-c9f15f90c0ad?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
 
   // --- RESTAURANTS ---
@@ -262,7 +262,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Tue-Sun 11am-9pm",
     featured: true,
-    imageUrl: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "Main Street Diner",
@@ -276,7 +276,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Mon-Sat 6am-2pm, Sun 7am-1pm",
     featured: true,
-    imageUrl: "https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "Mi Rancho Mexican Restaurant",
@@ -290,7 +290,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Tue-Sun 11am-8pm",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "The Depot Cafe",
@@ -304,7 +304,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Mon-Sat 7am-3pm",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
 
   // --- SISTER BUSINESSES (Canon City / Royal Gorge — 15 min from Florence) ---
@@ -426,7 +426,7 @@ const listingsData: schema.NewListing[] = [
     website: "https://goldbeltbyway.com",
     hours: "Open year-round (some sections seasonal)",
     featured: true,
-    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "Dinosaur Depot Museum",
@@ -440,7 +440,7 @@ const listingsData: schema.NewListing[] = [
     website: "https://dinosaurdepot.com",
     hours: "Mon-Sat 9am-5pm",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "Arkansas River Recreation",
@@ -468,7 +468,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Self-guided, available anytime",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
 
   // --- ART ---
@@ -484,7 +484,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Tue-Sat 11am-5pm",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
   {
     name: "Adobe House Gallery",
@@ -498,7 +498,7 @@ const listingsData: schema.NewListing[] = [
     website: null,
     hours: "Fri-Sun 11am-5pm",
     featured: false,
-    imageUrl: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&q=80&auto=format&fit=crop",
+    imageUrl: null,
   },
 ];
 
