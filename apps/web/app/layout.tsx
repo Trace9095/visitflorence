@@ -19,9 +19,16 @@ export const metadata: Metadata = {
     siteName: "Visit Florence, CO",
     locale: "en_US",
     type: "website",
+    url: "https://visitflorence.co",
+    title: "Visit Florence, CO — Antique Capital of Colorado",
+    description: "Discover Florence, Colorado — the Antique Capital of Colorado. Explore 100+ antique shops, craft breweries, local dining, and outdoor adventures just minutes from the Royal Gorge.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Visit Florence, CO" }],
   },
   twitter: {
     card: "summary_large_image",
+    title: "Visit Florence, CO — Antique Capital of Colorado",
+    description: "Discover Florence, Colorado — 100+ antique shops, craft breweries, local dining, minutes from the Royal Gorge.",
+    images: ["/opengraph-image"],
   },
   verification: {
     google: '7jc12-lVG5f_urymoqzGqftRCjj_5iFngU0PSXzXdPI',
