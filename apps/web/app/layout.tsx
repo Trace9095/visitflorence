@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import Script from "next/script";
+import { CookieConsent } from "@/components/cookie-consent";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
@@ -59,6 +60,7 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Analytics />
         <SpeedInsights />
+        <CookieConsent />
       </body>
     </html>
   );
