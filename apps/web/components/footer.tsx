@@ -105,6 +105,18 @@ export function Footer() {
           ))}
         </div>
 
+        {/* Also Explore — Florence */}
+        <div className="pb-6">
+          <p className="text-[#6B7280] text-xs uppercase tracking-wider font-medium mb-3">
+            Also Explore Florence, CO
+          </p>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <a href="https://visitflorencecolorado.com" target="_blank" rel="noopener noreferrer" className="text-[#8B949E] text-sm hover:text-[#D4A853] transition-colors">
+              Visit Florence Colorado
+            </a>
+          </div>
+        </div>
+
         <div
           className="mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4"
           style={{ borderTop: "1px solid #3D2518" }}

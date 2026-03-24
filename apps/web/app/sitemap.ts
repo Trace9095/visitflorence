@@ -9,7 +9,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const db = getDb();
 
   const allListings = await db.select({ slug: listings.slug, category: listings.category }).from(listings);
-  const allEvents = await db.select({ id: events.id }).from(events);
+  const allEvents = await db.select({ id: events.id, slug: events.slug }).from(events);
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: new Date(), changeFrequency: "daily", priority: 1 },
@@ -23,6 +23,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/pricing`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE_URL}/add-listing`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE_URL}/request-listing`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
+    { url: `${BASE_URL}/manage`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.4 },
   ];
 
   const listingRoutes: MetadataRoute.Sitemap = allListings.map((l) => ({
@@ -32,5 +33,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...listingRoutes];
+  const eventRoutes: MetadataRoute.Sitemap = allEvents.map((e) => ({
+    url: `${BASE_URL}/events/${e.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...listingRoutes, ...eventRoutes];
 }

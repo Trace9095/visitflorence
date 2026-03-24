@@ -36,22 +36,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <head>
-        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
-              strategy="beforeInteractive"
-            />
-            <Script id="gtag-init" strategy="beforeInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
-              `}
-            </Script>
-          </>
-        )}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "url": "https://visitflorence.co",
+              "name": "Visit Florence",
+              "description": "Explore Florence, Colorado — the Antique Capital of Colorado with unique shops, dining, and history."
+            })
+          }}
+        />
       </head>
       <body className="antialiased">
         <a href="#main-content" className="skip-to-content">
@@ -61,8 +57,24 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
         <CookieConsent />
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="gtag-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+              `}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );
 }
-// GA4 + GSC v2 - 2026-03-23
+// GA4 + GSC v3 - 2026-03-24
