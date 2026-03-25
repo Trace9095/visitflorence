@@ -1,7 +1,6 @@
 import { MetadataRoute } from "next";
 import { getDb } from "@/lib/db";
-import { listings, events } from "@/lib/db/schema";
-import { eq } from "drizzle-orm";
+import { listings } from "@/lib/db/schema";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://visitflorence.co";
 
@@ -9,7 +8,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const db = getDb();
 
   const allListings = await db.select({ slug: listings.slug, category: listings.category }).from(listings);
-  const allEvents = await db.select({ id: events.id, slug: events.slug }).from(events);
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: new Date(), changeFrequency: "daily", priority: 1 },
@@ -33,12 +31,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  const eventRoutes: MetadataRoute.Sitemap = allEvents.map((e) => ({
-    url: `${BASE_URL}/events/${e.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority: 0.6,
-  }));
-
-  return [...staticRoutes, ...listingRoutes, ...eventRoutes];
+  return [...staticRoutes, ...listingRoutes];
 }
